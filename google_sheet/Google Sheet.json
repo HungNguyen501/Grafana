@@ -1,0 +1,225 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 4,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "Google Sheets",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "left",
+            "displayMode": "color-text"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "frameIndex": 0,
+        "showHeader": false
+      },
+      "pluginVersion": "8.1.2",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "range": "data!A1:B6",
+          "refId": "A",
+          "spreadsheet": "1bzFDNRIAwkyv4SKSbJXt3Q4t4Paei9VSwg-XsFwVeeo"
+        }
+      ],
+      "title": "Top Players",
+      "type": "table"
+    },
+    {
+      "datasource": "Google Sheets",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "red",
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 27
+              },
+              {
+                "color": "red",
+                "value": 30
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 18,
+        "x": 6,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "displayMode": "basic",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "allValues"
+          ],
+          "fields": "/^Age at Dec 20 2012$/",
+          "values": true
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.1.2",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "range": "data!B1:C11",
+          "refId": "A",
+          "spreadsheet": "1bzFDNRIAwkyv4SKSbJXt3Q4t4Paei9VSwg-XsFwVeeo"
+        }
+      ],
+      "title": "Age",
+      "type": "bargauge"
+    },
+    {
+      "datasource": "Google Sheets",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "No"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 46
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 2,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "No"
+          }
+        ]
+      },
+      "pluginVersion": "8.1.2",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "refId": "A",
+          "spreadsheet": "1bzFDNRIAwkyv4SKSbJXt3Q4t4Paei9VSwg-XsFwVeeo"
+        }
+      ],
+      "title": "List",
+      "type": "table"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 30,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Google Sheet",
+  "uid": "R-_tWiDnz",
+  "version": 9
+}
